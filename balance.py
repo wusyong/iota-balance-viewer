@@ -11,7 +11,7 @@ seed = config.seed
 def addressGenerator():
 	# Although generating addresses won't connect to the node
 	api = Iota(node, seed)
-	gna_result = api.get_new_addresses(index=index, count=numberOfAddresses)
+	gna_result = api.get_new_addresses(index=index, count=numberOfAddresses, checksum=True)
 	addresses = gna_result['addresses']
 	i = 0
 	sum = 0
